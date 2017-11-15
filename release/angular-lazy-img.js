@@ -232,7 +232,6 @@ angular.module('angularLazyImg')
         scope.lazyImage.setErrorSource(attributes.lazyImgError);
         var deregister = attributes.$observe('lazyImg', function (newSource) {
           if (newSource) {
-            deregister();
             scope.lazyImage.setSource(newSource);
           }
         });
